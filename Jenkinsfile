@@ -2,6 +2,12 @@ pipeline {
   agent none
   stages {
     stage('Build') {
+      agent {
+        node {
+          label 'context'
+        }
+
+      }
       steps {
         bat 'gradlew'
         bat 'gradlew'
