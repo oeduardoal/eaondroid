@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'cmd.exe \'""gradlew.bat"\' clean && exit %%ERRORLEVEL%%"'
-        sh 'cmd.exe \'""gradlew.bat"\' assembleDebug && exit %%ERRORLEVEL%%"'
+        sh 'gradlew.bat clean'
+        sh 'gradlew.bat clean'
       }
     }
     stage('Archive') {
