@@ -9,8 +9,8 @@ pipeline {
 
       }
       steps {
-        bat(script: 'gradlew.bat clean', label: 'clean')
-        bat(script: 'gradlew.bat assembleDegub', label: 'gradlew.bat assembleDegub')
+        sh 'cmd.exe /C "gradlew.bat clean"'
+        sh 'cmd.exe /C "gradlew.bat assembleDebug"'
       }
     }
     stage('Archive') {
