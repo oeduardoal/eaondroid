@@ -2,12 +2,7 @@ pipeline {
   agent none
   stages {
     stage('Build') {
-      agent {
-        node {
-          label './'
-        }
-
-      }
+      agent any
       steps {
         sh 'sh "cmd.exe /C \\"gradlew.bat clean\\""'
       }
