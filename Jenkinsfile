@@ -1,10 +1,10 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('Build') {
       agent any
       steps {
-        sh './gradlew clean'
+        powershell './gradlew clean'
       }
     }
     stage('Archive') {
