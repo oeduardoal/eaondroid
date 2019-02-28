@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       agent any
       steps {
-        powershell './gradlew clean'
+        bat './gradlew clean'
       }
     }
     stage('Archive') {
