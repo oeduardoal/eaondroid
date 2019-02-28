@@ -9,8 +9,8 @@ pipeline {
 
       }
       steps {
-        bat(script: 'gradlew', encoding: 'clean', label: 'clean')
-        bat 'gradlew'
+        bat(script: 'gradlew.bat clean', label: 'clean')
+        bat(script: 'gradlew.bat assembleDegub', label: 'gradlew.bat assembleDegub')
       }
     }
     stage('Archive') {
