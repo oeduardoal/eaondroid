@@ -2,12 +2,6 @@ pipeline {
   agent none
   stages {
     stage('Build') {
-      agent {
-        node {
-          label 'context'
-        }
-
-      }
       steps {
         sh 'cmd.exe /C "gradlew.bat clean"'
         sh 'cmd.exe /C "gradlew.bat assembleDebug"'
