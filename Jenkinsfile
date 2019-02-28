@@ -9,7 +9,7 @@ pipeline {
 
       }
       steps {
-        bat 'gradlew'
+        bat(script: 'gradlew', encoding: 'clean', label: 'clean')
         bat 'gradlew'
       }
     }
